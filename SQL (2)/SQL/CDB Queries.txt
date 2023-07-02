@@ -1,0 +1,31 @@
+Query 1
+SELECT g.Name AS Genre, SUM(il.UnitPrice * il.Quantity) AS TotalRevenue
+FROM InvoiceLine il
+JOIN Track t ON t.TrackId = il.TrackId
+JOIN Genre g ON g.GenreId = t.GenreId
+GROUP BY g.Name
+ORDER BY TotalRevenue DESC;
+
+Query 2
+SELECT c.CustomerId, c.FirstName, c.LastName, SUM(i.Total) AS TotalSpending
+FROM Customer c
+JOIN Invoice i ON i.CustomerId = c.CustomerId
+GROUP BY c.CustomerId
+ORDER BY TotalSpending DESC
+LIMIT 5;
+
+Query 3
+SELECT a.ArtistId, a.Name AS ArtistName, COUNT(*) AS TotalTracksSold
+FROM Artist a
+JOIN Album al ON al.ArtistId = a.ArtistId
+JOIN Track t ON t.AlbumId = al.AlbumId
+JOIN InvoiceLine il ON il.TrackId = t.TrackId
+GROUP BY a.ArtistId, a.Name
+ORDER BY TotalTracksSold DESC
+LIMIT 3;
+
+Query 4 
+SELECT g.Name AS Genre, AVG(t.Milliseconds / 1000) AS AvgTrackLengthInSeconds
+FROM Genre g
+JOIN Track t ON g.GenreId = t.GenreId
+GROUP BY g.Name;
