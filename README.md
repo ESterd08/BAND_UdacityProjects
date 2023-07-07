@@ -19,7 +19,7 @@ By exploring this repository, you can gain insights into various data analysis m
 
 ## Projects
 
-1. [NYSE Kaggle](projects/project1): The project displayed ascepts reflecting profit loss, revenue margins, chart creat and manipulation.
+1. [NYSE Kaggle](projects/project1): The project displayed aspects reflecting profit loss, revenue margins, chart implementation and manipulation.
 2. [Fight or Flight](projects/project2): Utilizing flight datasets information was displayed to respond to inquires to highlight flaws in the US Carriers .
 3. [SQL](projects/project3): Using syntax code to interact with data and generate visualizations to express facts regarding revenue, customer base, customer preferences.
    
